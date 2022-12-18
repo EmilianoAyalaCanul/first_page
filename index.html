@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo"><img src="img/logo.png" alt="imagen no encontrada" width="10%" height="10%"></a>
+        <ul>
+           <li><a href="#" class="active">Inicio</a></li>
+           <li><a href="#">Youtube</a></li>
+           <li><a href="#">Facebook</a></li>
+           <li><a href="#">Contacto</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="img/stars.png" id="stars" alt="iamgen no encontrada">
+        <img src="img/moon.png" id="moon" alt="imagen no encontrada">
+        <h2 id="text">Emiliano Ayala Canul</h2>
+        <a href="#sec" id="btn">Informacion</a>
+        <img src="img/mountains_behind.png" id="mountains_behind" alt="">
+        <img src="img/mountains_front.png" id="mountains_front" alt="imagen no encontrada">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Informacion sobre mi</h2>
+        <p>
+            Hola mi nombre es Emiliano Ayala
+            <br>
+            tengo 22 años y estoy estudiando para ser un desarrollador web full stack
+            <br>
+            y decide empezar una carpeta para mi cvv en github donde puedo mostrar mi avance
+            <br>
+            como estudiante.
+            <br>y espero y me acompañes en el recorrido de mi aprendizaje. 
+        </p>    
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let mountains_front = document.getElementById('mountains_front'); 
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.left = value + 0.25 + 'px';
+            moon.style.top = value + 1.05 + 'px';
+            text.style.marginRight = value * 3.2 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
